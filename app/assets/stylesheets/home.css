@@ -1,0 +1,25 @@
+.slide{
+	height: 0px;
+}
+.image{
+	height: 50%;
+	width: 50%;
+}
+.item{
+	height: 500px
+	left: 1000px;
+}
+.slide{
+	background: #F5F5F5;
+}
+
+.product{
+	height: 250px;
+	width: 250px;
+}
+.categories{
+	margin-top: 400px;
+}
+.categoryname{
+	margin-left: 300px;
+}

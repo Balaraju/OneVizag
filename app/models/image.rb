@@ -1,4 +1,4 @@
 class Image < ActiveRecord::Base
   belongs_to :product
-  validates :imgae_src,presence: true
+  validates :image_src,presence: true
 end
