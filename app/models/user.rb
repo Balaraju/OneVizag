@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :omniauthable
          has_many :addresses
          has_one :is_admin
-
+         has_many :orders
+         has_many :wishlists
+         has_many :products,:through=>:wishlists
  def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
  	#raise access_token.inspect
     data = access_token.info
