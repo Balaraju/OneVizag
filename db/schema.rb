@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150811114922) do
+ActiveRecord::Schema.define(version: 20150811130106) do
 
   create_table "addresses", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
@@ -20,10 +20,44 @@ ActiveRecord::Schema.define(version: 20150811114922) do
     t.datetime "updated_at",               null: false
   end
 
+  create_table "categories", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "images", force: :cascade do |t|
+    t.string   "image_src",  limit: 255
+    t.integer  "product_id", limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "images", ["product_id"], name: "index_images_on_product_id", using: :btree
+
   create_table "is_admins", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.datetime "created_at",           null: false
     t.datetime "updated_at",           null: false
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "product_name", limit: 255
+    t.float    "price",        limit: 24
+    t.float    "available",    limit: 24
+    t.integer  "category_id",  limit: 4
+    t.integer  "unit_id",      limit: 4
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
+
+  add_index "products", ["category_id"], name: "index_products_on_category_id", using: :btree
+  add_index "products", ["unit_id"], name: "index_products_on_unit_id", using: :btree
+
+  create_table "units", force: :cascade do |t|
+    t.string   "unit_type",  limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -43,9 +77,13 @@ ActiveRecord::Schema.define(version: 20150811114922) do
     t.string   "uid",                    limit: 255
     t.integer  "phone_number",           limit: 4
     t.boolean  "status",                 limit: 1,   default: true
+    t.string   "user_name",              limit: 255
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "images", "products"
+  add_foreign_key "products", "categories"
+  add_foreign_key "products", "units"
 end
