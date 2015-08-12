@@ -37,7 +37,7 @@
 	</div>
 </center>
 <div class="categories">
-<%@categories.each do |category|%>
+<% @categories.each do |category| %>
 	
 		<div class="row hero-spacer container ">
 			<div class="col-lg-12 categoryname">
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 	</div>
-	<% category.products.first(4).each do |product|%>
+	<% category.products.first(4).each do |product| %>
 			<div class="container">
 				<div class="row text-center">
 					<div class="col-md-3 col-sm-6 hero-feature product">
