@@ -1,16 +1,42 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
+
+  #get 'home/index'
+
+#  root 'home#view'
+
+
+  get 'home/index'
+#>>>>>>> 10506500cbb3048eaa73946491a282b7f40b9140
+devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
+  #devise_for :users
+#>>>>>>> 4d2f2337bd60a51f6c6a9aea8544766e9c606105
+=======
+
+
+  resources :products
+
   get 'home/view'
   get 'home/index'
-
+  get 'home/products_view'
 devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   #devise_for :users
 
+>>>>>>> b9293fa3481bfcb00715648a6bf4a1d62f730314
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
+<<<<<<< HEAD
+root to: "home#index"
+=======
+<<<<<<< HEAD
+  root to: "home#index"
+=======
 root to: "home#view"
+>>>>>>> b9293fa3481bfcb00715648a6bf4a1d62f730314
+>>>>>>> 29a068e5958b3be70d1f149268586d061a98776a
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
