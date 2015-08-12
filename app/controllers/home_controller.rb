@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  def view
+  def index
   	@categories=Category.all
   end
 end
