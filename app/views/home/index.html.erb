@@ -1,0 +1,75 @@
+<!-- Navigation -->
+<center>
+	
+	<div class="container ">
+		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+		<!-- Wrapper for slides -->
+			<div class="carousel-inner" role="listbox">
+
+				<div class="item active">
+					<%= image_tag("onevizag1.jpg", alt: "onevizag1",class: "image") %>
+				</div>
+				<div class="item ">
+					<%= image_tag("onevizag2.jpg", alt: "onevizag2",class: "image") %>
+				</div>
+				<div class="item ">
+					<%= image_tag("onevizag3.jpg", alt: "onevizag3",class: "image") %>
+				</div>
+				<div class="item ">
+					<%= image_tag("onevizag7.jpg", alt: "onevizag4",class: "image") %>
+				</div>
+				<div class="item">
+					<%= image_tag("onevizag5.jpg", alt: "onevizag5",class: "image") %>
+				</div>
+				<div class="item">
+					<%= image_tag("onevizag6.jpg", alt: "onevizag6",class: "image") %>
+				</div>
+				<div class="item">
+					<%= image_tag("onevizag7.jpg", alt: "onevizag7",class: "image") %>
+				</div>
+				<div class="item">
+					<%= image_tag("onevizag5.jpg", alt: "onevizag8",class: "image") %>
+				</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</center>
+<div class="categories">
+<%@categories.each do |category|%>
+	
+		<div class="row hero-spacer container ">
+			<div class="col-lg-12 categoryname">
+				<h3><%= link_to category.name%></h3>
+			</div>
+		</div>
+	</div>
+	<% category.products.first(4).each do |product|%>
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-3 col-sm-6 hero-feature product">
+						<div class="thumbnail">
+							<img src="http://placehold.it/800x500" alt="">
+							<div class="caption">
+								<h3><%=product.product_name %></h3><span> ( <%= product.price %> ) </span>
+								<p><%= product.available.to_i%>  <span> <%= product.unit.unit_type%></span></p>
+								<p>
+									<a href="#" class="btn btn-primary">Buy Now!</a> <a href="#" class="btn btn-default">Add To Cart</a>
+								</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+<%end%>
+<!--
+<div class="categories">
+		<div class="row hero-spacer container ">
+	<div class="col-lg-12 categoryname">
+		<h3><%= link_to "Milk & Eggs"%></h3>
+	</div>
+</div>
+
+-->
