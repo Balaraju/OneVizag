@@ -78,5 +78,5 @@
    User.find(1).products << products.first
    User.find(2).products << products.second
    User.find(3).products << products.find(3)
-
+  
 
