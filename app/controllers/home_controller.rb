@@ -1,6 +1,5 @@
 class HomeController < ApplicationController
 
-#<<<<<<< HEAD
   def view
   	@categories=Category.all
   end
@@ -9,7 +8,10 @@ class HomeController < ApplicationController
   def index
   	@categories=Category.all
   end
- def products_view
+  def view
+  	@categories=Category.all
+  end
+  def products_view
   	@categories=Category.all
     
   	respond_to do |format|

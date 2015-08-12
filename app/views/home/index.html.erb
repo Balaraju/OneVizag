@@ -35,13 +35,16 @@
 	</div>
 </center>
 <div class="categories">
-	<%@categories.each do |category|%>
-		
-			<div class="row hero-spacer container ">
-				<div class="col-lg-12 categoryname">
-					<h3><%= link_to category.name%></h3>
-				</div>
+
+<% @categories.each do |category| %>
+	
+		<div class="row hero-spacer container ">
+			<div class="col-lg-12 categoryname">
+				<h3><%= link_to category.name%></h3>
 			</div>
+		</div>
+	</div>
+	
 	
 		<% category.products.first(4).each do |product|%>
 				<div class="container">
@@ -60,7 +63,7 @@
 					</div>
 				</div>
 			<% end %>
-	<%end%>
+	<% end %>
 </div>
 </div><!--End of result view-->
 
