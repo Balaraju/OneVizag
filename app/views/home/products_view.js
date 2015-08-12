@@ -1,0 +1,1 @@
+$(".resultview").html("<%= j render 'products_view' %>");
