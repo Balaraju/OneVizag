@@ -11,7 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150811132117) do
 =======
 <<<<<<< HEAD
@@ -27,13 +26,6 @@ ActiveRecord::Schema.define(version: 20150811132117) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
-=======
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150811144343) do
-=======
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150811114723) do
->>>>>>> 4ba0c2286929b115504ca5730e1682ded7b67fa8
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -84,6 +76,8 @@ ActiveRecord::Schema.define(version: 20150811114723) do
     t.float    "available",    limit: 24
     t.integer  "category_id",  limit: 4
     t.integer  "unit_id",      limit: 4
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD
 =======
 =======
@@ -186,6 +180,7 @@ ActiveRecord::Schema.define(version: 20150811114922) do
     t.float    "available",    limit: 24
     t.integer  "category_id",  limit: 4
     t.integer  "unit_id",      limit: 4
+>>>>>>> 29a068e5958b3be70d1f149268586d061a98776a
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
@@ -209,6 +204,10 @@ ActiveRecord::Schema.define(version: 20150811114922) do
     t.string   "email",                  limit: 255, default: "", null: false
     t.string   "encrypted_password",     limit: 255, default: "", null: false
 <<<<<<< HEAD
+    t.string   "name",                   limit: 255
+    t.string   "phone_number",           limit: 255
+=======
+<<<<<<< HEAD
     t.string   "user_name",              limit: 255
     t.string   "phone_number",           limit: 255
     t.string   "provider",               limit: 255
@@ -221,6 +220,7 @@ ActiveRecord::Schema.define(version: 20150811114922) do
 =======
 >>>>>>> 4ba0c2286929b115504ca5730e1682ded7b67fa8
 >>>>>>> b9293fa3481bfcb00715648a6bf4a1d62f730314
+>>>>>>> 29a068e5958b3be70d1f149268586d061a98776a
     t.string   "reset_password_token",   limit: 255
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
@@ -234,16 +234,21 @@ ActiveRecord::Schema.define(version: 20150811114922) do
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 29a068e5958b3be70d1f149268586d061a98776a
     t.string   "provider",               limit: 255
     t.string   "uid",                    limit: 255
-=======
     t.string   "user_name",              limit: 255
+<<<<<<< HEAD
+=======
     t.string   "provider",               limit: 255
     t.string   "uid",                    limit: 255
     t.string   "phone_number",           limit: 255
     t.boolean  "status",                 limit: 1
 >>>>>>> 4ba0c2286929b115504ca5730e1682ded7b67fa8
 >>>>>>> b9293fa3481bfcb00715648a6bf4a1d62f730314
+>>>>>>> 29a068e5958b3be70d1f149268586d061a98776a
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -254,8 +259,11 @@ ActiveRecord::Schema.define(version: 20150811114922) do
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 >>>>>>> 4ba0c2286929b115504ca5730e1682ded7b67fa8
 >>>>>>> b9293fa3481bfcb00715648a6bf4a1d62f730314
+>>>>>>> 29a068e5958b3be70d1f149268586d061a98776a
   create_table "wishlists", force: :cascade do |t|
     t.integer  "user_id",    limit: 4
     t.integer  "product_id", limit: 4
@@ -279,10 +287,13 @@ ActiveRecord::Schema.define(version: 20150811114922) do
 =======
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 4d2f2337bd60a51f6c6a9aea8544766e9c606105
 >>>>>>> 10506500cbb3048eaa73946491a282b7f40b9140
 >>>>>>> 4ba0c2286929b115504ca5730e1682ded7b67fa8
 >>>>>>> 89d520d867b9274609a6af7c4a5132c40887aa5a
 >>>>>>> b9293fa3481bfcb00715648a6bf4a1d62f730314
+>>>>>>> 29a068e5958b3be70d1f149268586d061a98776a
 end
