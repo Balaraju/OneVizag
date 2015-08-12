@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'home/view'
   get 'home/index'
-
+  get 'home/products_view'
 devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   #devise_for :users
 
@@ -10,7 +10,7 @@ devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks"
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-root to: "home#view"
+root to: "home#index"
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
