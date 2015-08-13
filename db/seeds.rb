@@ -41,7 +41,7 @@
     Product.find(5).images.create(image_src:"k.png")  
   
   #status
-   Status.craete(name:"pending")
+   Status.create(name:"pending")
    Status.create(name:"delivered")
    Status.create(name:"returned")
   #users
@@ -51,7 +51,7 @@
   User.create(user_name:"taj_js",email:"taj@gmail.com",phone_number:"8500032600",password:"password3",status:true)
 
   #login
-   IsAdmins.create(user_id:1)
+   IsAdmin.create(user_id:1)
 
    
    #address
@@ -75,8 +75,8 @@
 
    #wishlist
 
-   User.find(1).products << products.first
-   User.find(2).products << products.second
-   User.find(3).products << products.find(3)
+   User.find(1).products << Product.first
+   User.find(2).products << Product.second
+   User.find(3).products << Product.find(3)
   
 

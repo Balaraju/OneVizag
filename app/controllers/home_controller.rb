@@ -8,9 +8,6 @@ class HomeController < ApplicationController
   def index
   	@categories=Category.all
   end
-  def view
-  	@categories=Category.all
-  end
   def products_view
   	@categories=Category.all
     
